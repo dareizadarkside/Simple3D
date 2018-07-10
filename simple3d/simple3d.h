@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#define GLEW_STATIC
+//#define GLEW_STATIC
 #include <GL/glew.h>
 
 #include "src/gfx/Renderer.h"
@@ -17,7 +17,7 @@
 #include "src/gfx/3d/lighting/PointLight.h"
 #include "src/gfx/3d/lighting/LightingManager.h"
 
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
@@ -26,16 +26,16 @@
 #include <glm/gtc/random.hpp>
 using namespace glm;
 
-const char* flat_vs_path			= "./shaders/flat.vs";
-const char* flat_fs_path			= "./shaders/flat.fs";
-const char* flat_texture_vs_path	= "./shaders/flat-texture.vs";
-const char* flat_texture_fs_path	= "./shaders/flat-texture.fs";
-const char* basic_vs_path			= "./shaders/basic.vs";
-const char* basic_fs_path			= "./shaders/basic.fs";
-const char* basic_textured_vs_path	= "./shaders/basic-textured.vs";
-const char* basic_textured_fs_path	= "./shaders/basic-textured.fs";
-const char* lighting_vs_path		= "./shaders/lighting.vs";
-const char* lighting_fs_path		= "./shaders/lighting.fs";
+const char* flat_vs_path			= "../shaders/flat.vs";
+const char* flat_fs_path			= "../shaders/flat.fs";
+const char* flat_texture_vs_path	= "../shaders/flat-texture.vs";
+const char* flat_texture_fs_path	= "../shaders/flat-texture.fs";
+const char* basic_vs_path			= "../shaders/basic.vs";
+const char* basic_fs_path			= "../shaders/basic.fs";
+const char* basic_textured_vs_path	= "../shaders/basic-textured.vs";
+const char* basic_textured_fs_path	= "../shaders/basic-textured.fs";
+const char* lighting_vs_path		= "../shaders/lighting.vs";
+const char* lighting_fs_path		= "../shaders/lighting.fs";
 
 double Time()
 {

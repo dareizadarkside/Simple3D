@@ -1,5 +1,7 @@
 #include "JoystickManager.h"
 
+void joystick_callback(int joy, int event);
+
 JoystickManager::JoystickManager()
 {
 	for (int i = 0; i < MAX_JOYSTICKS; ++i)

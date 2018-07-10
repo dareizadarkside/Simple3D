@@ -51,7 +51,7 @@ private:
 	JoystickManager(const JoystickManager&) = delete;
 	void operator=(const JoystickManager&) = delete;
 
-	static friend void joystick_callback(int joy, int event);
+	friend void joystick_callback(int joy, int event);
 	void joystick_callback_implementation(int joy, int event);
 
 };

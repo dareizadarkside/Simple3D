@@ -1,8 +1,8 @@
 #pragma once
 
-#ifndef GLEW_STATIC
-#define GLEW_STATIC
-#endif // !GLEW_STATIC
+//#ifndef GLEW_STATIC
+//#define GLEW_STATIC
+//#endif // !GLEW_STATIC
 #include <GL/glew.h>
 
 #include <glm/glm.hpp>
@@ -55,6 +55,6 @@ public:
 	GLboolean Active();
 	GLvoid SetActive(GLboolean active);
 private:
-	GLvoid PointLight::UpdateShaders(const ShaderProgram& program, const GLuint light_id) const;
+	GLvoid UpdateShaders(const ShaderProgram& program, const GLuint light_id) const;
 };
 

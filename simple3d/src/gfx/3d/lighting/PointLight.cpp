@@ -102,16 +102,16 @@ GLvoid PointLight::UpdateShaders(const ShaderProgram& program, const GLuint ligh
 	program.Unbind();
 
 #ifdef DEBUG
-	std::cout << "Point: "
-		<< glGetUniformLocation(program.ID(), (structstr + ".position"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".ambient"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".diffuse"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".specular"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".constant"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".linear"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".quadratic"	).c_str()) << " "
-		<< glGetUniformLocation(program.ID(), (structstr + ".is_active"	).c_str()) << " "
-		<< std::endl;
+//    std::cout << "Point: "
+//        << glGetUniformLocation(program.ID(), (structstr + ".position"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".ambient"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".diffuse"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".specular"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".constant"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".linear"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".quadratic"    ).c_str()) << " "
+//        << glGetUniformLocation(program.ID(), (structstr + ".is_active"    ).c_str()) << " "
+//        << std::endl;
 #endif // DEBUG
 
 }

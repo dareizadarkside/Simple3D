@@ -1,10 +1,10 @@
 #pragma once
 
-#ifndef GLEW_STATIC
-#define GLEW_STATIC
-#endif // !GLEW_STATIC
+//#ifndef GLEW_STATIC
+//#define GLEW_STATIC
+//#endif // !GLEW_STATIC
 
-#include <GL\glew.h>
+#include <GL/glew.h>
 
 #include <string>
 #include <vector>

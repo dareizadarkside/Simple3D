@@ -1,5 +1,11 @@
 #include "Window.h"
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+void joystick_callback_log(int joy, int event);
+void window_size_callback(GLFWwindow* window, int width, int height);
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 Window::Window(GLuint width, GLuint height,
 	const char* title,
@@ -24,6 +30,14 @@ bool Window::Init()
 		std::cout << "Could not initialize GLFW!" << std::endl;
 		return false;
 	}
+    
+    // MacOS uses Legacy Profile as default for all created OpenGL context.
+    // Therefor by default only OpenGL up to 2.1 and GLSL up to 1.20 is supported.
+    // To use OpenGL 3.2+ you need to switch to the Core Profile. 
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	// Set GLFW Window hints
 	glfwWindowHint(GLFW_SAMPLES, 8);
@@ -303,7 +317,7 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 	}
 }
 
-void joystick_callback(int joy, int event)
+void joystick_callback_log(int joy, int event)
 {
 	if (event == GLFW_CONNECTED)
 	{		

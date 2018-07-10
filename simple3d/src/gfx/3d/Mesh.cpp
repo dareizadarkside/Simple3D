@@ -209,10 +209,10 @@ void Mesh::DrawFully(const ShaderProgram& program) const
 		glBindTexture(GL_TEXTURE_2D, textures_[i].id);
 
 		#ifdef DEBUG
-		std::cout << "Texture[" << i << "] :: ID " <<
-			textures_[i].id << " :: Type " << (int)textures_[i].type <<
-			" :: Path " << textures_[i].path.C_Str() <<
-			std::endl;
+//        std::cout << "Texture[" << i << "] :: ID " <<
+//            textures_[i].id << " :: Type " << (int)textures_[i].type <<
+//            " :: Path " << textures_[i].path.C_Str() <<
+//            std::endl;
 		#endif // DEBUG
 
 		// Get the uniform location for the Sampler
@@ -220,7 +220,7 @@ void Mesh::DrawFully(const ShaderProgram& program) const
 		if (textures_[i].type == TextureType::DIFFUSE_MAP)
 		{
 			#ifdef DEBUG
-			std::cout << "Applying diffuse map!" << std::endl;
+//            std::cout << "Applying diffuse map!" << std::endl;
 			#endif // DEBUG
 
 			sampler_uniform = GetUniformLocation(program.ID(), materialdiff.c_str());
@@ -228,7 +228,7 @@ void Mesh::DrawFully(const ShaderProgram& program) const
 		else if (textures_[i].type == TextureType::SPECULAR_MAP)
 		{
 			#ifdef DEBUG
-			std::cout << "Applying specular map!" << std::endl;
+//            std::cout << "Applying specular map!" << std::endl;
 			#endif // DEBUG
 
 			sampler_uniform = GetUniformLocation(program.ID(), materialspec.c_str());
@@ -237,8 +237,8 @@ void Mesh::DrawFully(const ShaderProgram& program) const
 		}
 
 		#ifdef DEBUG
-		std::cout << "Uniform: " << sampler_uniform << std::endl;
-		std::cout << "Program ID: " << program.ID() << std::endl;
+//        std::cout << "Uniform: " << sampler_uniform << std::endl;
+//        std::cout << "Program ID: " << program.ID() << std::endl;
 		#endif // DEBUG
 
 		// Pass the Texture Unit ID to the Sampler

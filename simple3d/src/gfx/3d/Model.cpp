@@ -1,8 +1,8 @@
 #include "Model.h"
 
-#ifndef GLEW_STATIC
-#define GLEW_STATIC
-#endif // !GLEW_STATIC
+//#ifndef GLEW_STATIC
+//#define GLEW_STATIC
+//#endif // !GLEW_STATIC
 #include <GL/glew.h>
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -328,9 +328,9 @@ std::vector<Texture> Model::LoadMaterialTextures(aiMaterial * material, aiTextur
 			textures_loaded_.push_back(texture);
 		}
 
-		#ifdef DEBUG
-		std::cout << "Loaded texture #" << i << std::endl;
-		#endif // DEBUG
+//        #ifdef DEBUG
+//        std::cout << "Loaded texture #" << i << std::endl;
+//        #endif // DEBUG
 	}
 
 	for (GLuint i = 0; i < material->GetTextureCount(type); ++i)

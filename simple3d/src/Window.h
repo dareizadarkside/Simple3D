@@ -1,6 +1,6 @@
 #pragma once
 
-#define GLEW_STATIC
+//#define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -89,14 +89,14 @@ private:
 	bool Init();
 
 	// Keyboard callback
-	static friend void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+	friend void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	// Mouse callbacks (position and buttons)
-	static friend void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
-	static friend void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+	friend void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
+	friend void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 	// Joystick callbacks
-	static friend void joystick_callback(int joy, int event);
+	friend void joystick_callback_log(int joy, int event);
 
 	// Window callbacks
-	static friend void window_size_callback(GLFWwindow* window, int width, int height);
-	static friend void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+	friend void window_size_callback(GLFWwindow* window, int width, int height);
+	friend void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 };
